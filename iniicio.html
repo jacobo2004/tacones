@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benditos Tacones</title>
+    <link rel="stylesheet" href="css/inicio.css">
+
+    <link rel="shortcut icon" href="img/iconbox.png" type="image/x-icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+</head>
+
+<body>
+<style>
+  
+  #cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e10a14;
+    color: #fff;
+    padding: 7px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cookie-banner button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 3px 20px;
+    cursor: pointer;
+
+    margin: 10px 80px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+#toggle-menu{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #cookie-banner {
+        flex-direction: column;
+        max-width: 380px;
+       padding: 10px;
+    }
+
+    
+
+    #cookie-banner p {
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
+    #cookie-banner button {
+        margin-left: 0px;
+    padding:5px 4px ; 
+    }
+}
+
+/* Menú desplegable para dispositivos móviles */
+
+
+
+
+@media only screen and (max-width: 780px) {
+    /* Estilos específicos para dispositivos móviles */
+
+
+    body {
+        max-width: 780px;
+        /* ajusta este valor según tus necesidades */
+        margin: 0 auto;
+        /* centra el contenido */
+        overflow-x: hidden;
+        padding: 0;
+
+    }
+
+
+
+    #logo {
+        display: block;
+        width: 60px;
+        margin-right: 320px;
+        /* Elimina el margen derecho en dispositivos móviles */
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: start;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        /* Ajusta el estilo del enlace */
+        padding: 10px;
+        /* Ajusta el espaciado */
+    }
+
+
+
+
+
+ 
+header {
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+#main-nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    -ms-text-size-adjust: 50%;
+    -webkit-text-size-adjust: 50%;
+    vertical-align: baseline;
+    background: transparent;
+   
+}
+
+#main-nav.show-nav {
+    transform: translateY(0);
+}
+
+#main-nav a {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Añade la transición */
+    outline: 0;
+}
+
+#main-nav.show-nav a {
+    display: block;
+    opacity: 1;
+    outline: 0;
+    
+   margin-left: -300px;
+   
+}
+
+#toggle-menu{
+    content: "a";
+    font-size: 25px;
+    position: center;
+  display: flex;
+    cursor: pointer;
+    background-color: #f7e4e3;
+    border: none;
+    color: #E10A14;
+    margin-left: -120px;
+}
+
+
+
+
+
+
+
+
+
+    #banner {
+        height: 400px;
+        background-size: cover;
+
+
+    }
+
+    #centro {
+        bottom: 20%;
+        margin-bottom: 20px;
+    }
+
+
+    #pideDomicilio {
+
+        font-size: 18px;
+    }
+
+    #bienvenidos {
+        margin-top: 30px;
+        font-size: 16px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px;
+        
+        /* Alinea el contenido a la izquierda */
+
+    }
+
+
+    #descripcion {
+
+        width:100%; /* O el ancho deseado */
+        margin: 0; /* Resetear el margen */
+        padding: 0; /* Resetear el padding */
+        box-sizing: border-box; /* Incluir padding y border en el ancho */
+
+    }
+
+ 
+#descripcion p{
+    width: 80%;
+    margin-left: -260px;
+}
+
+    #unete {
+        margin-top: 15px;
+        margin-left: 30px;
+        
+    }
+
+
+
+
+    #bodyopciones{
+        margin-left: -270px;
+    }
+
+    .containesopciones {
+        flex-direction: column;
+        margin-left: 0;
+        text-align: center;
+
+        max-width: 68%;
+
+    }
+
+    .containesopciones img {
+        width: 80%;
+        margin: 0px 0;
+
+    }
+
+    .containesopciones h3 {
+        font-size: 16px;
+    }
+
+    #vercarta {
+        margin-top: 15px;
+    }
+
+    #bodyfollow {
+        margin-top: 50px;
+        padding-bottom: 80px;
+    }
+
+   
+    .instagram-row {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .instagram-post img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .modal{
+        display: none;
+    }
+
+    .modal img {
+        display: none;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 70%;
+        margin-left: 45px;
+    }
+
+    .info,
+    .novedades,
+    .redes {
+        margin-left: 0;
+        text-align: center;
+
+    }
+
+    .novedades button,
+    .novedades a {
+        margin-top: 10px;
+    }
+
+   
+
+}
+
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7e4e3;
+}
+
+header {
+    background-color: #f7e4e3;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    /* Desplazamiento-x, desplazamiento-y, desenfoque, color */
+
+    z-index: 1000;
+    /* Ajusta el valor de z-index según tus necesidades */
+}
+
+#logo {
+    width: 100px;
+    /* ajusta el tamaño del logo según sea necesario */
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    margin: 0 15px;
+    margin-right: 50px;
+    text-decoration: none;
+    color: #E10A14;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+
+#banner {
+    margin-top: 10px;
+    width: 100%;
+    height: 730px;
+    /* ajusta la altura de la imagen según sea necesario */
+
+    position: relative;
+
+}
+
+#centro {
+    position: absolute;
+    left: 50%;
+    bottom: 27%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#centro img {
+    width: 60px;
+    aspect-ratio: auto 50 / 50;
+    height: 60px;
+    margin: 15px;
+
+
+}
+
+#pideDomicilio {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    align-items: column;
+
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+
+}
+
+#bienvenidos {
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 80px;
+    /* ajusta la distancia desde la imagen según sea necesario */
+
+}
+
+#descripcion {
+
+
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    max-width: 1000px;
+    /* Añade un ancho máximo para las descripciones */
+
+}
+
+#unete {
+    background-color: #e10a14;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+#encuentratutaconpreferido {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 80px;
+    /* ajusta la distancia desde la imagen según sea necesario */
+
+}
+
+
+
+
+
+
+.containesopciones {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    /* ajusta el ancho máximo según tus necesidades */
+    width: 100%;
+    margin-left: 160px;
+
+}
+
+.containesopciones a {
+    text-decoration: none;
+    /* Quitar el subrayado de los enlaces */
+    color: black;
+    /* Color del texto para todos los enlaces */
+}
+
+
+.containesopciones img {
+    width: 300px;
+    /* ajusta el ancho de las imágenes según tus necesidades */
+    cursor: pointer;
+    margin: 50px;
+    margin-bottom: 10px;
+
+}
+
+.containesopciones h3 {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    /* Quitar la negrita */
+
+}
+
+
+
+#vercarta {
+    background-color: #e10a14;
+    color: white;
+    padding: 10px 22px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+
+
+#bodyfollow {
+    display: flex;
+    flex-direction: column;
+    /* Cambiamos la dirección del flex a column */
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+    background-color: white;
+    padding-bottom: 120px;
+    padding-top: 20px;
+}
+
+
+.instagram-row {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.instagram-post {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+
+
+}
+
+.instagram-post img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.instagram-post:hover img {
+    transform: scale(1.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+
+
+}
+
+.modal img {
+    max-width: 50%;
+    max-height: 50%;
+    margin-left: 240px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.modal p {
+    color: white;
+    /* Color del texto */
+    font-size: 18px;
+    /* Tamaño del texto */
+    margin: 0;
+    margin-right: 240px;
+
+}
+
+
+#close-icon {
+    position: absolute;
+    top: 50px;
+    right: 475px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.footer {
+    background-color: #E10A14;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.info,
+.novedades,
+.redes {
+    flex: 1;
+    margin-left: 80px;
+    font-family: sans-serif;
+}
+
+.info a {
+    color: white;
+    /* Cambia el color a blanco */
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.novedades button {
+    display: block;
+    /* Muestra los botones en bloques separados */
+    margin-bottom: 10px;
+    /* Agrega un margen inferior para separar los botones */
+}
+
+.novedades a {
+    text-decoration: none;
+    /* Elimina el subrayado */
+}
+
+.boton-rojo {
+    background-color: #E10A14;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.boton-blanco {
+    background-color: #fff;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    padding: 10px 20px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.redes img {
+    max-width: 100px;
+    margin-right: 10px;
+
+}
+  
+  
+ </style>
+  
+  
+    <header>
+        <div>
+            <a href="inicio.html"> <img id="logo" src="img/tacinew (1).png" alt="Logo del restaurante"></a>
+            <!-- Reemplaza 'ruta_del_logo.jpg' con la ruta correcta de tu logo -->
+        </div>
+        <nav id="main-nav">
+
+            <button id="toggle-menu">☰</button>
+            <a href="carta.html">CARTA</a>
+            <a href="dondeestamos.html">DÓNDE ESTAMOS</a>
+            <a href="unete.html">ÚNETE</a>
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
+    
+       <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    var toggleButton = document.getElementById('toggle-menu');
+    var mainNav = document.getElementById('main-nav');
+
+    toggleButton.addEventListener('click', function () {
+        mainNav.classList.toggle('show-nav');
+    });
+});
+       </script>
+    </header>
+
+    <div style="background: url('img/fotoinicio.jpg') center/cover no-repeat;  filter: brightness(100%) contrast(80%); background-size:1690px; 
+    background-position: center;" id="banner">
+        <div id="centro">
+            <img src="img/glovo_small.webp" alt="Imagen 1">
+            <img src="img/just_eat_small.webp" alt="Imagen 2">
+            <img src="img/uber_eats_small.webp" alt="Imagen 3">
+
+        </div>
+        <a href="dondeestamos.html"><button id="pideDomicilio">PIDE A DOMICILIO</button></a>
+    </div>
+
+
+    <div id="cookie-banner" class="">
+        <p>Este sitio web utiliza cookies. Al continuar navegando, aceptas nuestro uso de cookies.</p>
+        <button id="accept-cookies">ACEPTAR</button>
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+
+    <div id="bienvenidos">
+        <h2>BIENVENIDOS A TACONES</h2>
+   
+        <div id="descripcion">
+            <p>Urban Poke nace por el deseo de incorporar la diversidad de culturas, ideas y estilos de
+                vida que encontramos en las ciudades dentro de un bowl. La revolución urbana basada
+                en Healthy Fast Food llegará pronto a tu ciudad basada en valores como: integración,
+                diversidad de culturas, calidad de nuestros productos, y excelencia en la atención rápida.</p>
+        </div>
+        <a href="unete.html"><button id="unete">ÚNETE TÚ TAMBIÉN A TACONES</button></a>
+
+    </div>
+
+
+    <div id="encuentratutaconpreferido">
+        <h2>ENCUENTRA TU TACÓN PREFERIDO</h2>
+
+        <div id="bodyopciones">
+            <div class="containesopciones">
+                <a href="carta.html" target="London">
+                    <img src="img/KingSalmon.webp" alt="Enlace 1">
+                    <h3>Tradicional</h3>
+                </a>
+                <a href="carta.html" target="_blank">
+                    <img src="img/LondonCity-1.webp" alt="Enlace 2">
+                    <h3>Picante</h3>
+                </a>
+                <a href="carta.html" target="Trufado">
+                    <img src="img/RevelTuna.webp" alt="Enlace 3">
+                    <h3>Trufado</h3>
+                </a>
+
+            </div>
+        </div>
+        <a href="carta.html"><button id="vercarta">VER CARTA</button></a>
+    </div>
+
+
+    <div id="bodyfollow">
+        <h2 onclick="redirectToWeb()">FOLLOW US <span id="username" style="color: red;">@benditostacones_</span></h2>
+
+        <div class="instagram-row">
+            <!-- Agrega tus divs ".instagram-post" según sea necesario -->
+            <div class="instagram-post" onclick="showModal('img/instagram1.png')">
+                <img src="img/instagram1.png" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram1.png')">
+                <img src="img/instagram1.png" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram1.png')">
+                <img src="img/instagram1.png" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram1.png')">
+                <img src="img/instagram1.png" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram1.png')">
+                <img src="img/instagram1.png" alt="Post 1">
+            </div>
+
+            <!-- Agrega más divs ".instagram-post" según sea necesario -->
+        </div>
+
+        <div class="instagram-row">
+            <!-- Agrega más divs ".instagram-post" según sea necesario -->
+            <div class="instagram-post" onclick="showModal('img/instagram1.png')">
+                <img src="img/instagram1.png" alt="Post 3">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram1.png')">
+                <img src="img/instagram1.png" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram1.png')">
+                <img src="img/instagram1.png" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram1.png')">
+                <img src="img/instagram1.png" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram1.png')">
+                <img src="img/instagram1.png" alt="Post 1">
+            </div>
+            <!-- Agrega más divs ".instagram-post" según sea necesario -->
+        </div>
+
+        <div class="modal" id="modal" onclick="closeModal()">
+            <a id="modal-link" href="#" onclick="redirectToWeb()">
+                <img id="modal-image" src="" alt="Zoomed Post">
+            </a>
+            <img id="close-icon" src="img/icons8-eliminar-30.png" alt="Close" onclick="closeModal()">
+        </div>
+
+        <script>
+            function showModal(imageSrc) {
+                var modal = document.getElementById('modal');
+                var modalImage = document.getElementById('modal-image');
+                var modalLink = document.getElementById('modal-link');
+
+                modalImage.src = imageSrc;
+                modalLink.href = 'https://www.instagram.com/benditostacones_/'; // Reemplaza con la URL real
+                modal.style.display = 'flex';
+            }
+
+            function closeModal() {
+                var modal = document.getElementById('modal');
+                modal.style.display = 'none';
+            }
+
+            // Agrega un listener solo para cerrar el modal haciendo clic en el fondo oscuro
+            document.getElementById('modal').addEventListener('click', function (event) {
+                if (event.target === this) {
+                    closeModal();
+                }
+            });
+
+            function redirectToWeb() {
+                // Redirige a la web al hacer clic en la imagen de close
+                window.location.href = 'https://www.instagram.com/benditostacones_/'; // Reemplaza con la URL real
+            }
+        </script>
+    </div>
+
+
+    <footer class="footer">
+        <div class="logo">
+            <!-- Logo del restaurante -->
+            <img src="img/logotaco.png" alt="Logo del restaurante">
+        </div>
+        <div class="info">
+            <h4>MÁS INFORMACIÓN</h4>
+            <ul>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">Aviso Legal</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Otros enlaces</a></li>
+            </ul>
+        </div>
+        <div class="novedades">
+            <h4>RECIBE LAS NOVEDADES</h4>
+            <a href="unete.html"> <button class="boton-rojo">SUSCRIBIRSE</button></a>
+            <a href="dondeestamos.html"> <button class="boton-blanco">PIDE TU TACÓN</button></a>
+        </div>
+        <div class="redes">
+            <h4>SÍGUENOS EN REDES</h4>
+            <a href="https://www.instagram.com/benditostacones_/" target="_blank"><img src="img/instagr.png"
+                    alt="Instagram"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="img/liked.png" alt="LinkedIn"></a>
+            <a href="https://www.tiktok.com/" target="_blank"><img src="img/tiktokas.png" alt="TikTok"></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

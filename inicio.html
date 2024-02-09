@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benditos Tacones</title>
+    <link rel="stylesheet" href="css/inicio.css">
+
+    <link rel="shortcut icon" href="img/iconbox.png" type="image/x-icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <a href="inicio.html"> <img id="logo" src="img/tacinew (1).png" alt="Logo del restaurante"></a>
+            <!-- Reemplaza 'ruta_del_logo.jpg' con la ruta correcta de tu logo -->
+        </div>
+        <nav id="main-nav">
+
+            <button id="toggle-menu">☰</button>
+            <a href="carta.html">CARTA</a>
+            <a href="dondeestamos.html">DÓNDE ESTAMOS</a>
+            <!-- <a href="unete.html">ÚNETE</a> -->
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var toggleButton = document.getElementById('toggle-menu');
+                var mainNav = document.getElementById('main-nav');
+
+                toggleButton.addEventListener('click', function () {
+                    mainNav.classList.toggle('show-nav');
+                });
+            });
+        </script>
+    </header>
+
+    <div style="background: url('img/Fotoentradalocalrecortada.jpg') center/cover no-repeat;  filter: brightness(100%) contrast(80%); background-size:auto; 
+    background-position: center;" id="banner">
+        <div id="centro">
+            <img src="img/just_eat_small.webp" alt="Justeat">
+            <img src="img/glovo_small.webp" alt="Glovo">
+            <img src="img/uber_eats_small.webp" alt="Ubereats">
+
+        </div>
+        <a href="dondeestamos.html"><button id="pideDomicilio">PIDE A DOMICILIO</button></a>
+    </div>
+
+
+    <div id="cookie-banner" class="">
+        <p>Este sitio web usa cookies, si permanece aquí acepta su uso. Puede leer más sobre el uso de
+            cookies en nuestra política de privacidad.</p>
+        <button id="accept-cookies">ACEPTAR</button>
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+
+    <div id="bienvenidos">
+        <h2>BIENVENIDOS A TACONES</h2>
+
+        <div id="descripcion">
+            <p>Tacones: díctese de una prenda de calzado, tradicionalmente utilizada por mujeres, caracterizada por
+                elevar la altura de quién los lleva. Más allá de una prenda, los tacones transmiten una serie de ideas
+                que se han incorporado al imaginario popular. Representan frivolidad, vanidad y superficialidad. Sin
+                embargo, nosotros buscamos acercarnos a lo que en su día representaron para tantas personas - y aún hoy
+                en día algunos rescatan. Es su cara B, es la capacidad de ensalzar el potencial de quien los calza, de
+                reafirmarse en la confianza en uno mismo. Eso, y un (ingenioso?) juego de palabras, porque vendemos
+                tacos.</p>
+            <p>Nunca quisimos crear un restaurante al uso en el que entrar, sentarse, elegir de entre una carta creada
+                por otros, comer, pagar e irse. Quisimos crear un negocio adaptado al mundo de hoy en día y a las
+                necesidades y preferencias de los consumidores. Contrariamente a lo que muchos piensan, no vendemos
+                comida mejicana. Vendemos un producto basado en el taco (esta vez sí, tradicionalmente mejicano), pero
+                confeccionado al gusto de cada uno. El cliente elige una de entre nuestras bases de tortilla, proteína,
+                varios toppings y salsas. Y aunque nos gusta pensar que lo de los tacos se nos da bien, hay quien dice
+                que en lo que somos cracks es en las alitas de pollo barbacoa… Aquí llueve a gusto de todos.</p>
+        </div>
+        <a href="unete.html"><button id="unete">ÚNETE TÚ TAMBIÉN A TACONES</button></a>
+
+    </div>
+
+
+    <div id="encuentratutaconpreferido">
+        <h2>ENCUENTRA TU TACÓN PREFERIDO</h2>
+
+        <div id="bodyopciones">
+            <div class="containesopciones">
+                <a href="carta.html" target="Tradicional">
+                    <img src="img/Taco1Inicio.png" alt="Enlace 1">
+                    <h3>Tradicional</h3>
+                </a>
+                <a href="carta.html" target="Indie">
+                    <img src="img/TacoIniicio2.png" alt="Enlace 2">
+                    <h3>Indie</h3>
+                </a>
+                <a href="carta.html" target="Trufado">
+                    <img src="img/TacoInivio3.png" alt="Enlace 3">
+                    <h3>Trufado</h3>
+                </a>
+
+            </div>
+        </div>
+        <a href="carta.html"><button id="vercarta">VER CARTA</button></a>
+    </div>
+
+
+    <div id="bodyfollow">
+        <h2 onclick="redirectToWeb()">FOLLOW US <span id="username" style="color: red;">@benditostacones_</span></h2>
+
+
+        <div class="instagram-row">
+            <!-- Agrega tus divs ".instagram-post" según sea necesario -->
+            <div class="instagram-post" onclick="showModal('img/instagram_totopos_1.jpg')">
+                <img src="img/instagram_totopos_1.jpg" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram_totopos.jpg')">
+                <img src="img/instagram_totopos.jpg" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram_taco_pollo (1).jpg')">
+                <img src="img/instagram_taco_pollo (1).jpg" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram_taco_japo.jpg')">
+                <img src="img/instagram_taco_japo.jpg" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram_sorteo.jpg')">
+                <img src="img/instagram_sorteo.jpg" alt="Post 1">
+            </div>
+
+            <!-- Agrega más divs ".instagram-post" según sea necesario -->
+        </div>
+
+        <div class="instagram-row">
+            <!-- Agrega más divs ".instagram-post" según sea necesario -->
+            <div class="instagram-post" onclick="showModal('img/instagram_questionario.jpg')">
+                <img src="img/instagram_questionario.jpg" alt="Post 3">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram_patatas_japo.jpg')">
+                <img src="img/instagram_patatas_japo.jpg" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram_foodtruck.jpg')">
+                <img src="img/instagram_foodtruck.jpg" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram_el_dictador.jpg')">
+                <img src="img/instagram_el_dictador.jpg" alt="Post 1">
+            </div>
+            <div class="instagram-post" onclick="showModal('img/instagram_alitas_bbq.jpg')">
+                <img src="img/instagram_alitas_bbq.jpg" alt="Post 1">
+            </div>
+            <!-- Agrega más divs ".instagram-post" según sea necesario -->
+        </div>
+
+        <div class="modal" id="modal" onclick="closeModal()">
+            <a id="modal-link" href="#" onclick="redirectToWeb()">
+                <img id="modal-image" src="" alt="Zoomed Post">
+            </a>
+            <img id="close-icon" src="img/icons8-eliminar-30.png" alt="Close" onclick="closeModal()">
+        </div>
+
+
+        <script>
+            function showModal(imageSrc) {
+                var modal = document.getElementById('modal');
+                var modalImage = document.getElementById('modal-image');
+                var modalLink = document.getElementById('modal-link');
+                var backgroundOverlay = document.getElementById('background-overlay');
+
+                modalImage.src = imageSrc;
+                modalLink.href = 'https://www.instagram.com/benditostacones_/'; // Reemplaza con la URL real
+                modal.style.display = 'flex';
+
+                // Muestra el fondo gris
+                backgroundOverlay.style.display = 'block';
+            }
+
+            function closeModal() {
+                var modal = document.getElementById('modal');
+                var backgroundOverlay = document.getElementById('background-overlay');
+
+                modal.style.display = 'none';
+
+                // Oculta el fondo gris al cerrar el modal
+                backgroundOverlay.style.display = 'none';
+            }
+
+            // Agrega un listener solo para cerrar el modal haciendo clic en el fondo oscuro
+            document.getElementById('modal').addEventListener('click', function (event) {
+                if (event.target === this) {
+                    closeModal();
+                }
+            });
+
+            function redirectToWeb() {
+                // Redirige a la web al hacer clic en la imagen de close
+                window.location.href = 'https://www.instagram.com/benditostacones_/'; // Reemplaza con la URL real
+            }
+        </script>
+    </div>
+
+
+    <footer class="footer">
+        <div class="logo">
+            <!-- Logo del restaurante -->
+            <img src="img/logotaco.png" alt="Logo del restaurante">
+        </div>
+        <div class="info">
+            <h4>MÁS INFORMACIÓN</h4>
+            <ul>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="avisolegal.html">Aviso Legal</a></li>
+                <li><a href="politicaprivacidad.html">Política de Privacidad</a></li>
+                <li><a href="#">Otros enlaces</a></li>
+            </ul>
+        </div>
+        <div class="novedades">
+            <h4>RECIBE LAS NOVEDADES</h4>
+            <a href="unete.html"> <button class="boton-rojo">SUSCRIBIRSE</button></a>
+            <a href="dondeestamos.html"> <button class="boton-blanco">PIDE TU TACÓN</button></a>
+        </div>
+        <div class="redes">
+            <h4>SÍGUENOS EN REDES</h4>
+            <a href="https://www.instagram.com/benditostacones_/" target="_blank"><img src="img/instagr.png"
+                    alt="Instagram"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="img/liked.png" alt="LinkedIn"></a>
+            <a href="https://www.tiktok.com/" target="_blank"><img src="img/tiktokas.png" alt="TikTok"></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
