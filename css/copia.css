@@ -1,0 +1,474 @@
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e10a14;
+    color: #fff;
+    padding: 7px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cookie-banner button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 3px 20px;
+    cursor: pointer;
+    
+    margin: 10px 80px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+
+-->
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7e4e3;
+}
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    }
+
+}
+
+header {
+    background-color: #f7e4e3;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05); /* Desplazamiento-x, desplazamiento-y, desenfoque, color */
+    z-index: 1000;
+    /* Ajusta el valor de z-index según tus necesidades */
+}
+
+header img {
+    width: 100px;
+    margin-left: -2px;
+    margin-top: -2px;
+    margin-bottom: 2px;
+}
+
+nav{
+    display: flex;
+    margin-right: 2px;
+}
+nav a {
+    margin: 0 15px;
+    margin-right: 50px;
+    text-decoration: none;
+    color: #E10A14;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+section {
+    background: url center/cover no-repeat;
+    height: 730px;
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+
+    /* ajusta según sea necesario */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f7e4e3;
+    text-align: center;
+}
+
+
+section h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.destacado{
+    font-size: 95px;
+    color: white;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 370px; /* ajusta según sea necesario */
+    margin: 6px 0;
+}
+
+.button {
+    padding: 10px;
+    background-color: red ;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+
+h2{
+    display: block;
+    text-align:start;
+    margin-bottom: 10px;
+    margin-left: 230px;
+    margin-top: 50px;
+    font-size: xx-large;
+    color: #ff0000;
+}
+
+
+.entrantes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 50px;
+  
+}
+
+.column-left, .column-right {
+   margin-left: 100px ;
+
+}   
+
+.entrante {
+    text-align: center;
+    margin: 10px ;
+    display: flex;
+    margin-bottom: 25px;
+        
+}
+
+.entrante img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+    
+}
+
+
+
+
+
+.contenedor-imagen {
+    position: relative;
+    display: inline-flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+.imagen-principal {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    margin-left: 300px;
+}
+
+.imagen-principal:hover {
+    filter: grayscale(0%);
+}
+
+.galeria-imagenes {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 10;
+    background-color: #f7e4e3;
+    
+    padding: 100%;
+    
+}
+
+.galeria-imagenes img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.entrante-info {
+    text-align: left;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.entrante-info h3 {
+    overflow-wrap: break-word;
+    margin: 5px 0; /* Ajusta el espacio vertical entre los elementos h3 según sea necesario */
+    line-height: 1.2; /* Ajusta según sea necesario para controlar el espacio entre líneas */
+}
+.entrante-info p {  
+    margin-top: 10px;
+    margin: 5px 0;
+    max-width: 270px; /* Añade un ancho máximo para las descripciones */
+
+    
+}
+
+body.scrolled .scrollTitle {
+    opacity: 1;
+}
+
+
+
+
+/* Estilos para el contenedor principal */
+.tacones-container {
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* Estilos para cada fila */
+.fila {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+/* Estilos para cada entrada */
+.tacone {
+    text-align: left;
+    margin: 10px; /* Añade márgenes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+/* Estilos para las imágenes */
+.tacone img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los títulos */
+.tacone h3 {
+    margin: 10px 0;
+}
+
+/* Estilos para las descripciones */
+.tacone p {
+    margin: 10px 0;
+    max-width: 250px; /* Añade un ancho máximo para las descripciones */
+
+}
+
+
+
+
+/* Estilos para el contenedor de otros entrantes */
+.otros-tacones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;  
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.filaas{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin-left: 660px;
+}
+
+/* Estilos para cada otro entrante */
+.otro-tacon {
+    margin: 45px;
+    margin-bottom:-30px;
+    
+}
+
+/* Estilos para las imágenes en otros entrantes */
+.otro-tacon img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px; /* Márgenes más pequeños entre la imagen y el título */
+}
+
+/* Estilos para los títulos en otros entrantes */
+.otro-tacon h3 {
+    margin: 5px 0; /* Márgenes más pequeños */
+    font-weight: 200;
+    font-size: medium;
+    max-width: 130px;
+    
+}
+
+.filass{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+    margin-left: 200px;
+    display: flex;
+    margin-bottom: 50px;
+    
+}
+
+
+.postres-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+  
+}
+
+
+
+.postre {
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.postre img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.postre-info {
+    text-align: left;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.postre-info h3 {
+    overflow-wrap: break-word;
+    margin: 5px 0; /* Ajusta el espacio vertical entre los elementos h3 según sea necesario */
+    line-height: 1.2; /* Ajusta según sea necesario para controlar el espacio entre líneas */
+}
+.postre-info p {  
+    margin-top: 10px;
+    margin: 5px 0;
+    max-width: 250px; /* Añade un ancho máximo para las descripciones */
+
+}
+
+.footer {
+    background-color: #E10A14;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+  
+  .logo img {
+    max-width: 100%;
+  }
+  
+  .info,
+  .novedades,
+  .redes {
+    flex: 1;
+    margin-left: 80px;
+    font-family: sans-serif;
+  }
+
+  .info a{
+    color: white; /* Cambia el color a blanco */
+  text-decoration: none;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+
+  .novedades button {
+    display: block; /* Muestra los botones en bloques separados */
+    margin-bottom: 10px; /* Agrega un margen inferior para separar los botones */
+  }
+  .novedades a{
+    text-decoration: none; /* Elimina el subrayado */
+}
+  
+  .boton-rojo {
+    background-color: #E10A14;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 0px;
+    cursor: pointer;
+  }
+  
+  .boton-blanco {
+    background-color: #fff;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    padding: 10px 20px;
+    border-radius: 0px;
+    cursor: pointer;
+  }
+  
+  .redes img {
+    max-width: 100px;
+    margin-right: 10px;
+    
+  }
